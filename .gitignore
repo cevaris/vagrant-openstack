@@ -1,4 +1,4 @@
 vagrant/cookbooks
 vagrant/tmp
 vagrant/Cheffile.lock
-.vagrant
+.vagrant/
