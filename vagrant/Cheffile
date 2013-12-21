@@ -6,6 +6,7 @@ site 'http://community.opscode.com/api/v1'
 # cookbook 'apt'
 # cookbook 'java'
 
+# Needed for keystone
 cookbook 'osops-utils',
    git: 'https://github.com/rcbops-cookbooks/osops-utils.git'
 

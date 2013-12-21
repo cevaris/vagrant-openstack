@@ -19,7 +19,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "precise64OpenStack"
  
   # Turn off shared folders
-  config.vm.synced_folder ".", "/vagrant", id: "vagrant-root", disabled: true
+  # config.vm.synced_folder ".", "/vagrant", id: "vagrant-root", disabled: true
 
   # Begin controller
   config.vm.define "controller" do |controller_config|
@@ -29,7 +29,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     controller_config.vm.provision :chef_solo do |chef|
       chef.log_level = :debug
-      chef.cookbooks_path = ["vagrant/cookbooks", "vagrant/site-cookbooks"]
+      chef.cookbooks_path = ["vagrant/cookbooks"]
       chef.add_recipe "keystone"
       # chef.json = {
       #   :cassandra => {'cluster_name' => 'My Cluster',
