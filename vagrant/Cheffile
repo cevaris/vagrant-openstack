@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+#^syntax detection
+
+site 'http://community.opscode.com/api/v1'
+
+# cookbook 'apt'
+# cookbook 'java'
+
+cookbook 'osops-utils',
+   git: 'https://github.com/rcbops-cookbooks/osops-utils.git'
+
+cookbook 'keystone',
+   git: 'https://github.com/cevaris/keystone.git'
+    
